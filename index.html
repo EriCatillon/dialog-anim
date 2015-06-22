@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/set1.css">
+<link rel="stylesheet" type="text/css" href="css/set2.css">
+<link rel="stylesheet" href="css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="js/draggabilly.js"></script>
+<script src="js/style.js"></script>
+	
+</head>
+<body>
+	<div id="wrapper">
+		<div id="tools">
+			<div id="dialog">
+				<!--
+				<img id="dialog_img" src="img/iconmonstr-window-new-icon-48.png" alt="">
+				Boite de dialog
+				-->
+				<div id="background_drag" class="color_drag">
+					Background Color
+					<ul>
+					    <li value="#f0f0f0"><div class="drag_white"></div></li>
+					    <li value="#000000"><div class="drag_black"></div></li>
+					    <li value="#c0c3d5"><div class="drag_grey"></div></li>
+						<li value="#fb6964"><div class="drag_red"></div></li>
+						<li value="#5fa1e0"><div class="drag_blue"></div></li>
+						<li value="#47ae73"><div class="drag_green"></div></li>
+						<li value="#eae7c4"><div class="drag_yellow"></div></li>
+					</ul>
+
+				</div>
+				<div id="color_drag" class="color_drag">
+					Color
+					<ul>
+						<li value="#f0f0f0"><div class="drag_white"></div></li>
+						<li value="#000000"><div class="drag_black"></div></li>
+						<li value="#c0c3d5"><div class="drag_grey"></div></li>
+						<li value="#fb6964"><div class="drag_red"></div></li>
+						<li value="#5fa1e0"><div class="drag_blue"></div></li>
+						<li value="#47ae73"><div class="drag_green"></div></li>
+						<li value="#eae7c4"><div class="drag_yellow"></div></li>
+					</ul>
+
+				</div>
+				<div id="border_drag" class="color_drag">
+					Border Color
+					<ul>
+						<li value="#f0f0f0"><div class="drag_white"></div></li>
+						<li value="#000000"><div class="drag_black"></div></li>
+						<li value="#c0c3d5"><div class="drag_grey"></div></li>
+						<li value="#fb6964"><div class="drag_red"></div></li>
+						<li value="#5fa1e0"><div class="drag_blue"></div></li>
+						<li value="#47ae73"><div class="drag_green"></div></li>
+						<li value="#eae7c4"><div class="drag_yellow"></div></li>
+					</ul>
+
+				</div>
+				<div id="border_radius" >
+					
+					<p>Border radius:</p>
+					<div id="border_radius_param">
+						<label for="">All Border</label>
+						<input id="borderAll" type="range" step="0.2" min="0" max="50">
+						<div id="valueBorderAll"></div>
+						<label for="">Top Left</label>
+						<input id="borderTopLeft" type="range" step="0.2" min="0" max="50">
+						<div id="valueBorderTopLeft"></div>
+						<label for="">Top Right</label>
+						<input id="borderTopRight" type="range" step="0.2" min="0" max="50">
+						<div id="valueBorderTopRight"></div>
+						<label for="">Bottom Left</label>
+						<input id="borderBottomLeft" type="range" step="0.2" min="0" max="50">
+						<div id="valueBorderBottomLeft"></div>
+						<label for="">Bottom Right</label>
+						<input id="borderBottomRight" type="range" step="0.2" min="0" max="50">
+						<div id="valueBorderBottomRight"></div>
+						<label for="">Border width</label>
+						<input id="borderWidth" type="range" step="0.2" min="0" max="50">
+						<div id="valueBorderWidth"></div>
+					</div>	
+					
+				</div>
+
+				<div id="border_shadow" >
+					<p>Border shadow:</p>
+					<div id="border_shadow_param">
+						<label for="">Horizontal Length</label>
+						<input id="shadowX" type="range" step="0.2" min="0" max="200">
+						<div id="valueshadowX"></div>
+						<label for="">Vertical Length</label>
+						<input id="shadowY" type="range" step="0.2" min="0" max="200">
+						<div id="valueshadowY"></div>
+						<label for="">Blur Radius</label>
+						<input id="shadowBlur" type="range" step="0.2" min="0" max="300">
+						<div id="valueshadowBlur"></div>
+						<label for="">Spread Radius</label>
+						<input id="shadowSpread" type="range" step="0.2" min="0" max="200">
+						<div id="valueshadowSpread"></div>
+						<label for="">Opacity</label>
+						<input id="shadowOpacity" type="range" step="0.2" min="0" max="1">
+						<div id="valueshadowOpacity"></div>
+					</div>	
+					
+				</div>
+			</div>
+
+		</div>
+		<div id="overlayContainer">
+			<div id="overlay_dialog">
+				<div id="overlay">
+					<div id="element">
+						<div id="reset">+</div>
+						<h2>Title Dialog</h2>
+						<p>Text content Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="formContainer">
+			<div id="form_dialog">
+				<div id="typeAnim">
+					<p>Type of animation:</p>
+					<ul>
+						<li value="scaleMax" >Scale Max</li>
+						<li value="scaleMin" >Scale Min</li>
+						<li value="slideTop" >Slide Top</li>
+						<li value="slideLeft" >Slide Left</li>
+						<li value="slideRight" >Slide Right</li>
+						<li value="slideBottom" >Slide Bottom</li>
+						<li value="rotate" >Rotate</li>
+						<li value="flip_x" >Flip X 180deg</li>
+						<li value="flip_y" >Flip Y 180deg</li>
+						<li value="flip_x2" >Flip X 90deg</li>
+						<li value="flip_y2" >Flip Y 90deg</li>
+					</ul>
+				</div>
+				<div id="timingAnim">
+					<p>Transition-timing-function:</p>
+					<ul>
+						<li value="ease">ease</li>
+						<li value="linear">linear</li>
+						<li value="ease-in">ease-in</li>
+						<li value="ease-out">ease-out</li>
+						<li value="ease-in-out">ease-in-out</li>
+					</ul>
+				</div>
+				<div id="duration">
+					<label>Transition-duration:</label>
+					<input type="range" step="0.2" min="0" max="3" id="time_val">
+					<div id="value_time_val"></div>
+				</div>
+				<div id="delay">
+					<label>Transition-delay:</label>
+					<input type="range" step="0.2" min="0" max="3" id="delay_time_val">
+					<div id="value_delay_time_val"></div>
+				</div>
+				
+			</div>
+			<div id="form_input">
+				<div id="typeAnim">
+					<p>Type of animation:</p>
+					<ul>
+						<li value="scaleMax" >Scale Max</li>
+						<li value="scaleMin" >Scale Min</li>
+						<li value="slideTop" >Slide Top</li>
+						<li value="slideLeft" >Slide Left</li>
+						<li value="slideRight" >Slide Right</li>
+						<li value="slideBottom" >Slide Bottom</li>
+						<li value="rotate" >Rotate</li>
+						<li value="flip_x" >Flip X</li>
+						<li value="flip_y" >Flip Y</li>
+					</ul>
+				</div>
+				<div id="timingAnim">
+					<p>Transition-timing-function:</p>
+					<ul>
+						<li value="ease">ease</li>
+						<li value="linear">linear</li>
+						<li value="ease-in">ease-in</li>
+						<li value="ease-out">ease-out</li>
+						<li value="ease-in-out">ease-in-out</li>
+					</ul>
+				</div>
+				<div id="duration">
+					<label>Transition-duration:</label>
+					<input type="range" step="0.2" min="0" max="3" id="time_val">
+					<div id="value_time_val"></div>
+				</div>
+				<div id="delay">
+					<label>Transition-delay:</label>
+					<input type="range" step="0.2" min="0" max="3" id="delay_time_val">
+					<div id="value_delay_time_val"></div>
+				</div>
+				<div id="color">
+					<label>Color:</label>
+					<input id="bg_color" type="color" name="favcolor">
+				</div>
+				<div id="border_color">
+					<label>Border Color:</label>
+					<input id="bd_color" type="color" name="favcolor">
+				</div>
+
+				
+			</div>
+
+		</div>
+		<div id="button_css"> 
+			<div id="css_click">Get Code</div>
+			<pre id="output_css"></pre>
+		</div>
+
+	</div>	
+	
+	
+	
+	
+
+
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>
